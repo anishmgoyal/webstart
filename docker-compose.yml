@@ -1,0 +1,30 @@
+version: "3"
+services:
+  db:
+    image: webstartdb
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 500M
+    ports:
+      - "5432:5432"
+    networks:
+      - net
+  web:
+    image: webstart
+    depends_on:
+      - db
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: 500M
+    ports:
+      - "2646:2646"
+    networks:
+      - net
+networks:
+  net:

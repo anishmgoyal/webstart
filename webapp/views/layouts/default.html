@@ -1,0 +1,16 @@
+{{- define "base" -}}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example Layout</title>
+
+        <link rel="stylesheet" type="text/css" href="/css/grid.css" />
+        {{ block "includes" . }}{{ end }}
+    </head>
+    <body>
+        {{ template "body" . }}
+
+        {{ block "deferredIncludes" . }}{{ end }}
+    </body>
+</html>
+{{- end -}}

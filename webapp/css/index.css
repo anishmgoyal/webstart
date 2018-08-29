@@ -1,0 +1,16 @@
+div:nth-of-type(2), div:nth-of-type(3) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div:nth-of-type(2) {
+    background-color: #ddd;
+}
+
+div:nth-of-type(3) {
+    background-color: #ccc;
+}
+
+div.small-full {
+    margin: 5px 0;
+}

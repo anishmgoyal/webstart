@@ -1,0 +1,14 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error {{ .Data.ErrorCode }}</title>
+    </head>
+    <body>
+        <h1>Error {{ .Data.ErrorCode }}</h1>
+        <p>
+            {{ .Data.ErrorMessage }}
+        </p>
+    </body>
+</html>
+{{ end }}
